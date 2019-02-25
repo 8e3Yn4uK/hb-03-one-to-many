@@ -15,10 +15,9 @@ private int id;
 @Column(name = "title")
 private String title;
 
-@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE,
-                      CascadeType.DETACH, CascadeType.REFRESH})
+@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
 @JoinColumn(name = "instructor_id")
-private Instructor myInstructor;
+private Instructor instructor;
 
     public Course() {
     }
@@ -43,12 +42,12 @@ private Instructor myInstructor;
         this.title = title;
     }
 
-    public Instructor getMyInstructor() {
-        return myInstructor;
+    public Instructor getInstructor() {
+        return instructor;
     }
 
-    public void setMyInstructor(Instructor myInstructor) {
-        this.myInstructor = myInstructor;
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
     }
 
     @Override

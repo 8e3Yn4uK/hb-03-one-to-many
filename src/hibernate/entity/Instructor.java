@@ -101,7 +101,7 @@ public class Instructor {
             courses = new ArrayList<>();
         }
         courses.add(myCourse);
-        myCourse.setMyInstructor(this);
+        myCourse.setInstructor(this);
     }
 
     @Override
